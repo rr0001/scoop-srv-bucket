@@ -1,14 +1,14 @@
 # Scoop Bucket Template
 
 <!-- Uncomment the following line after replacing placeholders -->
-<!-- [![Build Status](https://ci.appveyor.com/api/projects/status/<appveyor-badge-id>?svg=true)](https://ci.appveyor.com/project/<username>/<bucketname> "Build Status") [![Excavator](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml) -->
+[![Build Status](https://ci.appveyor.com/api/projects/status/tj68se0eicusq5w8?svg=true)](https://ci.appveyor.com/project/rr0001/scoop-srv-bucket "Build Status") [![Excavator](https://github.com/rr0001/scoop-srv-bucket/actions/workflows/excavator.yml/badge.svg)](https://github.com/rr0001/scoop-srv-bucket/actions/workflows/excavator.yml)
 
 Template bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
 
 How do I install these manifests?
 ---------------------------------
 
-To add this bucket, run `scoop bucket add <bucketname> https://github.com/<username>/<bucketname>`. To install, do `scoop install <manifest>`.
+To add this bucket, run `scoop bucket add scoop-srv-bucket https://github.com/rr0001/scoop-srv-bucket`. To install, do `scoop install <manifest>`.
 
 How do I contribute new manifests?
 ----------------------------------
