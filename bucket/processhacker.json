@@ -1,0 +1,33 @@
+{
+    "homepage": "http://processhacker.sourceforge.io",
+    "description": "A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.",
+    "version": "3.0.4517",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ProcessHackerRepoTool/nightly-builds-mirror/releases/download/v3.0.4517/processhacker-3.0.4517-bin.zip",
+            "hash": "445bb508edda84bbd24703b830e713ce5009fc2254caa0e4d1de025f2e07a265",
+            "extract_dir": "64bit"
+        }
+    },
+    "bin": [
+        "processhacker.exe",
+        "peview.exe"
+    ],
+    "persist": [
+        "ProcessHacker.exe.settings.xml",
+        "usernotesdb.xml"
+    ],
+    "shortcuts": [
+        [
+            "processhacker.exe",
+            "Process Hacker"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/ProcessHackerRepoTool/nightly-builds-mirror"
+    },
+    "autoupdate": {
+        "url": "https://github.com/ProcessHackerRepoTool/nightly-builds-mirror/releases/download/v$version/processhacker-$version-bin.zip"
+    }
+}
