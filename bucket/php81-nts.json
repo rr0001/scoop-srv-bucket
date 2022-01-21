@@ -21,7 +21,8 @@
         "# Create directory for custom PHP configuration",
         "if (!(Test-Path \"$dir\\cli\\conf.d\")) {",
         "    (New-Item -Type directory \"$dir\\cli\\conf.d\") | Out-Null",
-        "}"
+        "}",
+        "Get-Service php81-nts -ErrorAction SilentlyContinue | Stop-Service"
     ],
     "post_install": [
         "# Enable extensions to be found in installation-relative folder (the default is to search C:/php)",
