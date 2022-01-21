@@ -18,23 +18,24 @@
         "PGUSER": "postgres"
     },
     "pre_install": [
-        "Get-Service postgresql-x64-14 -ErrorAction SilentlyContinue | Stop-Service"
+        "Get-Service pg14 -ErrorAction SilentlyContinue | Stop-Service"
     ],
     "post_install": [
-        "$PGService = 'postgresql-x64-14'",
         "if (!(Test-Path \"$dir\\data\\pg_hba.conf\")) {",
         "   $null = initdb --username=postgres --encoding=UTF8 --locale=en --lc-collate=C",
         "}",
+        "$PGService = 'pg14'",
         "if (Get-Service $PGService -ErrorAction SilentlyContinue | Start-Service) {",
         "   echo 'PostgreSQL Windows Service has started: $PGService'",
         "} else {",
+        "   # Register the windows service",
         "   $null = pg_ctl register -N $PGService",
         "   Get-Service $PGService -ErrorAction SilentlyContinue | Start-Service",
         "   echo 'PostgreSQL Windows Service has been installed and has started: $PGService'",
         "}"
     ],
     "uninstaller": {
-        "script": "Get-Service postgresql-x64-14 -ErrorAction SilentlyContinue | Remove-Service"
+        "script": "Get-Service pg14 -ErrorAction SilentlyContinue | Remove-Service"
     },
     "shortcuts": [
         [
@@ -43,9 +44,9 @@
         ]
     ],
     "notes": [
-        "PostgreSQL has been installed as a Windows Service: postgresql-x64-14",
+        "PostgreSQL has been installed as a Windows Service: pg14",
         "",
-        "To start/stop the service: `net start postgresql-x64-14`, net stop postgresql-x64-14"
+        "To stop and/or delete the Service run `Stop-Service pg14` and `Remove-Service pg14`."
     ],
     "checkver": {
         "url": "https://www.postgresql.org/applications-v2.xml",
