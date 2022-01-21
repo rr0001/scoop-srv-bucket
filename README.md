@@ -14,10 +14,16 @@ Based on the Template bucket for [Scoop](https://scoop.sh), the Windows command-
 Manifest | Description
 ---------|------------
 caddy | Caddy Web Server
-oic21 | Oracle Instant Client 21
-pg14 | PostgreSQL server v14
+pg14 | PostgreSQL Server v14
 php81-nts | PHP 8.1 NTS
+
+## Additional Apps
+
+Manifest | Description
+---------|------------
+oic21 | Oracle Instant Client 21c
 php81-xdebug | PHP 8.1 xDebug
+processhacker | ProcessHacker Nightly
 
 ## How do I install these manifests?
 
