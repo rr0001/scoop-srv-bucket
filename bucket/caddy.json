@@ -1,12 +1,12 @@
 {
-    "version": "2.4.6",
+    "version": "2.5.0",
     "description": "HTTP/2 web server with automatic HTTPS",
     "homepage": "https://caddyserver.com",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/caddyserver/caddy/releases/download/v2.4.6/caddy_2.4.6_windows_amd64.zip",
-            "hash": "sha512:08fe8b50664644f5672a7357a7fe4c4835828c2464965ad78ec5f483dd2cd5643c64ea929d2f131601c48d71d2ddaebe251eb608d435ae1e31abe39d0687aebb"
+            "url": "https://github.com/caddyserver/caddy/releases/download/v2.5.0/caddy_2.5.0_windows_amd64.zip",
+            "hash": "sha512:bdd4080106c861512a0b879349cc1526c4e025cec7b2be756bb8d5a3ee704e4911959cfb81f3af3004fe0862fb0dfadbb8e0a9ea728a3f6586a5527df010bacc"
         }
     },
     "bin": "caddy.exe",
@@ -20,9 +20,7 @@
         "   Add-Content -Path \"$ini\" -Value \"http://localhost {`n`troot * /Projects/www/localhost`n`tphp_fastcgi 127.0.0.1:9081`n`tfile_server`n}\" -Encoding Ascii",
         "}"
     ],
-    "persist": [
-        "Caddyfile"
-    ],
+    "persist": "Caddyfile",
     "post_install": [
         "# Install as windows service",
         "nssm install caddy \"$dir\\caddy.exe\" \"run --config=$dir\\Caddyfile\"",
@@ -30,9 +28,7 @@
         "nssm start caddy"
     ],
     "uninstaller": {
-        "script": [
-            "$null = nssm remove caddy confirm"
-        ]
+        "script": "$null = nssm remove caddy confirm"
     },
     "notes": [
         "Caddy has been installed as a Windows Service with NSSM: caddy",
