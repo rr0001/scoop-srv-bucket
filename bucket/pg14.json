@@ -1,12 +1,12 @@
 {
     "homepage": "https://www.postgresql.org",
     "description": "Object-relational database management system based on POSTGRES.",
-    "version": "14.5-1",
+    "version": "14.6-1",
     "license": "PostgreSQL",
     "architecture": {
         "64bit": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.5-1-windows-x64-binaries.zip",
-            "hash": "7e2cd7c82741667c5effd736d5da31fb0aeefc0eba5c8c69f89340519b265017"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.6-1-windows-x64-binaries.zip",
+            "hash": "fb2cb01b07a952f578c57fbe20112e8f1e3722117c68b3bb2c3290a276005f94"
         }
     },
     "extract_dir": "pgsql",
