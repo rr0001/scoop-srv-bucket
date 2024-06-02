@@ -1,12 +1,12 @@
 {
-    "version": "2.8.1",
+    "version": "2.8.2",
     "description": "HTTP/2 web server with automatic HTTPS",
     "homepage": "https://caddyserver.com",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/caddyserver/caddy/releases/download/v2.8.1/caddy_2.8.1_windows_amd64.zip",
-            "hash": "sha512:d7d2afd6e9d47990b47194c2ca2a385fefe1c5381e0c98d41d799e9f9a797072916b3db17e7c990f792532edeab52cc0cfa399eb907a79b44e1d94d50bae089c"
+            "url": "https://github.com/caddyserver/caddy/releases/download/v2.8.2/caddy_2.8.2_windows_amd64.zip",
+            "hash": "sha512:3e287d7dfc686f66e63a9b5952deb237fceb0931118a0eb5e586c89669371955d27e43b988a7daaba73d3dcb66f3b6217315f977d4710c68fd5870c443630acf"
         }
     },
     "bin": "caddy.exe",
